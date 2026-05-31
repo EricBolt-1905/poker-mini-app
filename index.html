@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Helper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Экран 1: выбор количества игроков -->
+        <div id="screen-players" class="screen active">
+            <h2>Сколько игроков за столом?</h2>
+            <button class="btn" data-players="2">2</button>
+            <button class="btn" data-players="6">6</button>
+            <button class="btn" data-players="9">9</button>
+        </div>
+
+        <!-- Экран 2: выбор позиции -->
+        <div id="screen-position" class="screen">
+            <h2>Твоя позиция</h2>
+            <div id="positions-container"></div>
+            <button class="btn back-btn">← Назад</button>
+        </div>
+
+        <!-- Экран 3: выбор карт -->
+        <div id="screen-cards" class="screen">
+            <h2>Выбери карты</h2>
+            <div class="card-selector" id="card1">
+                <p>Левая карта</p>
+                <div class="suits">
+                    <button data-suit="s">♠</button>
+                    <button data-suit="h">♥</button>
+                    <button data-suit="d">♦</button>
+                    <button data-suit="c">♣</button>
+                </div>
+                <div class="ranks">
+                    <button data-rank="A">A</button>
+                    <button data-rank="K">K</button>
+                    <button data-rank="Q">Q</button>
+                    <button data-rank="J">J</button>
+                    <button data-rank="T">10</button>
+                    <button data-rank="9">9</button>
+                    <button data-rank="8">8</button>
+                    <button data-rank="7">7</button>
+                    <button data-rank="6">6</button>
+                    <button data-rank="5">5</button>
+                    <button data-rank="4">4</button>
+                    <button data-rank="3">3</button>
+                    <button data-rank="2">2</button>
+                </div>
+            </div>
+            <div class="card-selector" id="card2">
+                <p>Правая карта</p>
+                <div class="suits">
+                    <button data-suit="s">♠</button>
+                    <button data-suit="h">♥</button>
+                    <button data-suit="d">♦</button>
+                    <button data-suit="c">♣</button>
+                </div>
+                <div class="ranks">
+                    <button data-rank="A">A</button>
+                    <button data-rank="K">K</button>
+                    <button data-rank="Q">Q</button>
+                    <button data-rank="J">J</button>
+                    <button data-rank="T">10</button>
+                    <button data-rank="9">9</button>
+                    <button data-rank="8">8</button>
+                    <button data-rank="7">7</button>
+                    <button data-rank="6">6</button>
+                    <button data-rank="5">5</button>
+                    <button data-rank="4">4</button>
+                    <button data-rank="3">3</button>
+                    <button data-rank="2">2</button>
+                </div>
+            </div>
+            <button id="get-advice" class="btn" disabled>Узнать действие</button>
+            <button class="btn back-btn">← Назад</button>
+        </div>
+
+        <!-- Экран 4: результат -->
+        <div id="screen-result" class="screen">
+            <h2>Рекомендация</h2>
+            <div id="result-text"></div>
+            <button class="btn back-btn">← Начать заново</button>
+        </div>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="poker-charts.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
