@@ -55,5 +55,4 @@ async def webhook_handler(request: Request):
         return PlainTextResponse("Bot is running")
 
 app = Starlette(routes=[
-    Route("/api/webhook", webhook_handler, methods=["GET", "POST"]),
-])
+    Route("/api/webhook", webhook_handler, methods=["GET", "
